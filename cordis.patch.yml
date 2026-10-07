@@ -1,0 +1,17 @@
+# dsh-tavern-preset-roles：游玩请求按预设条目自身的 role 发送。
+# 改配置后重启 DSH Tavern 生效。
+- insert:
+    - id: dsh-tavern-preset-roles
+      name: dsh-tavern-preset-roles
+      inject:
+        - llm
+      config:
+        tavernLib: !!js dshHomePath('apps', 'dsh-tavern', 'tavern-plugin', 'lib')
+        dataRoot: !!js dshHomePath('profile-data', 'tavern', 'data')
+        # 分段开关：false = 该段保持 DSH 原样
+        front: true
+        middle: true
+        back: true
+        # DSH 自己的 system 材料（人物卡、世界书等）放在前段条目之后（after-front）或之前（first）
+        systemPosition: after-front
+        debug: false

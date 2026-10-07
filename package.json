@@ -1,0 +1,28 @@
+{
+  "name": "dsh-tavern-preset-roles",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "description": "DSH Tavern：游玩时按预设条目自身的 role 发送（前/中/后三段不再强制 system/user）",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lindemellis/dsh-tavern-preset-roles.git"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh-tavern",
+    "deepseek-harness",
+    "sillytavern"
+  ]
+}
